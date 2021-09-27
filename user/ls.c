@@ -12,7 +12,7 @@ fmtname(char *path)
   // Find first character after last slash.
   for(p=path+strlen(path); p >= path && *p != '/'; p--)
     ;
-  p++;
+  p++;//Now p points to the last word's head
 
   // Return blank-padded name.
   if(strlen(p) >= DIRSIZ)
