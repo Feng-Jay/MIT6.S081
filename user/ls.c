@@ -12,7 +12,7 @@ fmtname(char *path)
   // Find first character after last slash.
   for(p=path+strlen(path); p >= path && *p != '/'; p--)
     ;
-  p++;//Now p points to the last word's head
+  p++;
 
   // Return blank-padded name.
   if(strlen(p) >= DIRSIZ)
@@ -43,7 +43,7 @@ ls(char *path)
 
   switch(st.type){
   case T_FILE:
-    printf("%s %d %d %l\n", fmtname(path), st.type, st.ino, st.size);//if it is a file, just output
+    printf("%s %d %d %l\n", fmtname(path), st.type, st.ino, st.size);
     break;
 
   case T_DIR:
